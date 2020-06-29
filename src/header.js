@@ -11,7 +11,6 @@ const StyledHeader = styled.header`
         content: "x";
         display: block;
         width: 100%;
-        //TODO　固定するか決める
         position: fixed;
         z-index: 999;
             &:after {
@@ -22,7 +21,7 @@ const StyledHeader = styled.header`
                 left: 0;
                 margin-top: -2px !important;
                 margin-left: -2vw !important;
-                height: 70px;
+                height: 50px;
                 width: 102vw;
                 background: white;
                 clip-path: polygon(0% 0%,100% 100%,100% 0%,100% 0%) !important;
@@ -43,6 +42,8 @@ const NavList = styled.li`
     padding: 10px;
     color: #7F7F7F;
     font-size: 15px;
+    transition: all 0.5s ease;
+
     cursor:pointer;
           &:hover {
            color: #FF8F8F; }`;
