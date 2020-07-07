@@ -3,19 +3,21 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
-import img1 from "./images/1.jpg";
-import img2 from "./images/2.jpg";
-import img3 from "./images/3.jpg";
+import img1 from "../images/1.jpg";
+import img2 from "../images/2.jpg";
+import img3 from "../images/3.jpg";
 import Flip from 'react-reveal/Flip';
 
 
 const StaticWrapper = styled.div`
 position: static;
 width: 100%;
-height: 720px;
+height: 530px;
 background-color: white;
 overflow: hidden;
-
+     @media (max-width: 768px) {
+height: 520px;
+        }
 `;
 
 const StyledSlider = styled.div`
@@ -24,6 +26,9 @@ top: 191px;
 width: 100%;
 height: 720px;
 overflow: hidden;
+     @media (max-width: 768px) {
+top: 100px;
+        }
 `;
 const ImgWrapper = styled.div`
 &:focus{
@@ -75,6 +80,9 @@ left:50%;
 transform: translate(-50%, -50%); 
 color: #565656;
 font-size: 3rem;
+@media (max-width: 550px) {
+     font-size: 2rem;
+}
 `;
 const InnerTextBig = styled.div`
 margin: 1em 0;
@@ -168,6 +176,7 @@ class MainSlider extends Component {
             slidesToScroll: 1,
         };
         return (
+
             <StaticWrapper>
                 <StyledSlider>
                     <Slider {...settings}>
@@ -175,7 +184,6 @@ class MainSlider extends Component {
                             <MainMessageInnerWrapper>
                                 <MainMessageInnerText>
                                     <Flip left cascade>
-
                                         ネザー、ロップ、ミニうさぎなど
                                     </Flip>
 

@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './Components/serviceWorker';
 import './index.css';
-import Header from './header';
-import MainSlider from "./slider";
-import Service from "./sevice";
-import Use from "./use";
+import {BrowserRouter} from 'react-router-dom';
+import App from './Screens/App';
 
 
 ReactDOM.render(
     <>
-        <Header/>
-        <MainSlider/>
-        <Service/>
-        <Use/>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+
     </>
     ,
     document.getElementById('root')

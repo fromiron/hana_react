@@ -29,6 +29,19 @@ body {
 
 }
 
+a {
+    text-decoration: none;
+
+}
+
+/*
+body {
+    line-height: 1;
+    font-family: UDDigiKyokasho R;
+    background-color: #F8F8F8;
+
+}*/
+
 ol, ul {
     list-style: none;
 
@@ -62,3 +75,41 @@ button:focus {
 html {
     font-size: 10px;
 }
+
+/*
+popup用
+ */
+
+.swal-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+
+.swal-overlay {
+    background-color: rgba(102, 102, 102, 0.45);
+}
+
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    font-family: UDDigiKyokashoNK-R, UD Digi Kyokasho NK-R;
+    display: block;
+    width: 100%;
+    background-color: gray;
+
+}
+
+.swal-button:focus,
+.swal-button:hover,
+.swal-button:active,
+.swal-button:not([disabled]):hover {
+    background-color: #ff6082;
+    border: none;
+}
+
