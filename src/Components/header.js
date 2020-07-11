@@ -1,10 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import Logo from '../images/logo.svg'
 import SmallLogo from '../images/small_logo.svg'
 import useWindowSize from "./windowSize";
 import {Link} from 'react-router-dom';
-
 
 const StyledHeader = styled.header`
         background-color: white;
@@ -153,9 +152,40 @@ height:100px;
 `;
 
 
+const Arrow = styled.div`
+position: fixed;
+bottom: 1rem;
+right: 1rem;
+background-color: #565656;
+width:  3rem;
+height: 3rem;
+z-index: 1000;
+border-radius: 50%;
+color: white;
+font-size: 1.7rem;
+overflow: hidden;
+text-align: center;
+line-height: 3rem;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.1);
+cursor: pointer;
+transition: all 0.2s ease;
+    &:hover{
+    width:  4rem;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #FF6082;
+}`;
+
+
 function Header() {
     let windowSize = useWindowSize();
     let width = windowSize.width;
+
+    const scrollTop = () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+
+
     return (
         <div>
             <StyledHeader>
@@ -180,6 +210,7 @@ function Header() {
                     </StyledNav>
                 </NavWrapper>
             </StyledHeader>
+            <Arrow onClick={scrollTop}>Top</Arrow>
             <NavHeightFixer/>
 
         </div>

@@ -7,7 +7,7 @@ import twitter from '../images/twitter.svg';
 
 const FooterInnerWrapper = styled.section`
 width: 100%;
-max-width: 1280px;
+max-width: 800px;
 display: flex;
 overflow: hidden;
 padding: 2rem 5rem;
@@ -18,6 +18,7 @@ text-align: center;
 `;
 
 const StyledFooter = styled.div`
+border-top: 1px #909090 solid;
 background: #A6ADB4;
 height: 200px;
 width: 100%;
@@ -25,25 +26,27 @@ box-sizing: border-box;
 display: flex;
 justify-content: center;
 transition: all 0.5s ease;
+
 `;
 
 const FooterTop = styled.div`
 display: flex;
 height: 150px;
 width: 100%;
+justify-content: space-around;
+
 `;
 
 const FooterLogo = styled.div`
-
-left:0;
-top:0;
 max-width:255px;
 min-width: 200px;
 margin: 2rem;
 height:80%;
 background: url(${wLogo}) no-repeat center;
 background-size: contain;
-
+@media (max-width: 768px) {
+display: none;
+}
 `;
 const FooterBottom = styled.div`
 width: 100%;
@@ -65,6 +68,9 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 height: 100%;
+@media (max-width: 550px) {
+display: none;
+}
 `;
 const FooterNavLi = styled.li`
 display: block;
@@ -81,6 +87,9 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 margin-right: 4rem;
+@media (max-width: 550px) {
+margin-right: 0;
+}
 `;
 
 const FooterSnsIcon = styled.img`
@@ -88,20 +97,20 @@ width: 4rem;
 height: 4rem;
 `;
 const FooterInfo = styled.div`
-position: relative;
 padding: 0;
-width: 100%;
+width: 300px;
 height: 100%;
 
 `;
 
 const FooterInfoTable = styled.table`
-position: absolute;
-right: 0;
-width: 100%;
+width: 300px;
 height: 100%;
-font-size:13px ;
+font-size:13px;
 text-align: left;
+@media (max-width: 550px) {
+font-size:11px;
+}
 `;
 
 function Contact() {

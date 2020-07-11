@@ -101,14 +101,9 @@ transition: all 0.5s ease;
           left: -2rem;
            &:after{
             font-size: 3rem;
-            
-           }
-           
-    }
-    
-    
-
-`;
+                       }
+               }
+   `;
 
 
 const TextSize4 = styled.div`

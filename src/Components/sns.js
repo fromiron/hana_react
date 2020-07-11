@@ -23,8 +23,8 @@ transition: all 0.5s ease;
 `;
 
 const SnsWrapper = styled.div`
-border-top: 20px #ff6082 solid ;
-border-bottom: 20px #ff6082 solid ;
+
+  box-shadow: 0 -2px 5px #efefef, 0 5px 10px #e5e5e5;
 
 `;
 
