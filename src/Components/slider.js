@@ -141,12 +141,10 @@ animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530)1.5s both;
 
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
             filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
             filter: blur(0px);
     opacity: 1;
   }
