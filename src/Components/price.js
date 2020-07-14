@@ -14,7 +14,7 @@ justify-content: center;
 color: #565656;
 background-color: #F8F8F8;
 height: auto;
-
+overflow: hidden;
 `;
 
 const MarinFixer = styled.div`

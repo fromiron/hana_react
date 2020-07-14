@@ -1,8 +1,9 @@
 import React from 'react';
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import Nanbokusen from "./nanbokusen";
 import Touzaisen from "./touzaisen";
 import Tohosen from "./tohosen";
+import Fade from 'react-reveal/Fade';
 
 const FareWrapper = styled.div`
     width: auto;
@@ -18,7 +19,7 @@ const FareWrapper = styled.div`
     padding: 1rem;
     background-color: white;
     &:hover{
-    box-shadow: 0 5px 5px rgba(40,40,40,0.2),0 15px 25px rgba(87,87,87,0.2),0 0px 5px rgba(21,21,21,0.2);
+    box-shadow: 0 5px 5px rgba(40,40,40,0.2),0 15px 25px rgba(87,87,87,0.2),0 0 5px rgba(21,21,21,0.2);
     top:-2px;
     }
     @media screen and (max-width: 550px){
@@ -81,7 +82,7 @@ function Fare() {
     const StationWrapper = ({traffic, station, fare, color}) => (
         <FareWrapper>
             <FareItem>
-                <Traffic   style={{backgroundColor: color}}>{traffic}</Traffic>
+                <Traffic style={{backgroundColor: color}}>{traffic}</Traffic>
                 <TrafficDetail>
                     <TrafficInfo>
                         <Station>{station}</Station><FareInfo
@@ -94,40 +95,50 @@ function Fare() {
     )
 
     return <>
-        <FareWrapper>
-            <FareItem>
-                <Traffic style={{backgroundColor: "gray"}}>市電</Traffic>
-                <TrafficDetail>
-                    <TrafficInfo>
-                        <Station>札幌市電前駅</Station><FareInfo
-                        style={{backgroundColor:  "gray"}}>300円</FareInfo>
-                    </TrafficInfo>
-                </TrafficDetail>
-            </FareItem>
-        </FareWrapper>
+        <Fade bottom>
+            <FareWrapper>
+                <FareItem>
+                    <Traffic style={{backgroundColor: "gray"}}>市電</Traffic>
+                    <TrafficDetail>
+                        <TrafficInfo>
+                            <Station>札幌市電前駅</Station><FareInfo
+                            style={{backgroundColor: "gray"}}>300円</FareInfo>
+                        </TrafficInfo>
+                    </TrafficDetail>
+                </FareItem>
+            </FareWrapper>
+        </Fade>
+
         <ListWrapper>
 
             <StyledOl>
-                {Nanbokusen.map((station, index) => (
-                    <StationWrapper key={index} traffic="南北線" station={station.station} fare={station.fare}
-                                    color="#5a935e"/>
-                ))}
+                <Fade bottom>
+                    {Nanbokusen.map((station, index) => (
+                        <StationWrapper key={index} traffic="南北線" station={station.station} fare={station.fare}
+                                        color="#5a935e"/>
+                    ))}
+                </Fade>
             </StyledOl>
 
             <StyledOl>
-                {Touzaisen.map((station, index) => (
-                    <StationWrapper key={index} traffic="東西前" station={station.station} fare={station.fare}
-                                    color="#f8a14a"/>
-                ))}
+                <Fade bottom>
+                    {Touzaisen.map((station, index) => (
+                        <StationWrapper key={index} traffic="東西前" station={station.station} fare={station.fare}
+                                        color="#f8a14a"/>
+                    ))}
+                </Fade>
             </StyledOl>
             <StyledOl>
-                {Tohosen.map((station, index) => (
-                    <StationWrapper key={index} traffic="東豊線" station={station.station} fare={station.fare}
-                                    color="#1d8cfb"/>
-                ))}
+                <Fade bottom>
+                    {Tohosen.map((station, index) => (
+                        <StationWrapper key={index} traffic="東豊線" station={station.station} fare={station.fare}
+                                        color="#1d8cfb"/>
+                    ))}
+                </Fade>
             </StyledOl>
 
         </ListWrapper>
+
     </>
 
 }
