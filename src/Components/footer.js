@@ -51,7 +51,7 @@ display: none;
 const FooterBottom = styled.div`
 width: 100%;
 text-align: center;
-font-size: 13px;
+font-size: 11px;
 `;
 
 
@@ -142,12 +142,12 @@ function Contact() {
                             </tr>
                             <tr>
                                 <td>代表責任者</td>
-                                <td>杉下由樹</td>
+                                <td>畑山由樹</td>
                             </tr>
                             <tr>
                                 <td>所在地</td>
-                                <td>〒064-0809 <br/>
-                                    札幌市中央区南9条西7丁目2-30-605
+                                <td>〒062-0932 <br/>
+                                    札幌市豊平区平岸2条17丁目1-15-303
                                 </td>
                             </tr>
                             <tr>
@@ -156,11 +156,11 @@ function Contact() {
                             </tr>
                             <tr>
                                 <td>電話番号</td>
-                                <td>070-5555-1111</td>
+                                <td>070-8433-6363</td>
                             </tr>
                             <tr>
                                 <td>メール</td>
-                                <td>mail@mail.com</td>
+                                <td>hana.rbsr@gmail.com</td>
                             </tr>
                         </FooterInfoTable>
                     </FooterInfo>

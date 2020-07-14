@@ -1,17 +1,17 @@
 import React from 'react';
 import '../index.css';
 import Header from '../Components/header';
-import Service from "../Components/service";
+import Price from "../Components/price";
+import Footer from "../Components/footer";
+
 
 function PricePage() {
     return (
 
         <>
             <Header/>
-
-            <Service/>
-            price
-
+            <Price/>
+            <Footer/>
         </>
     );
 }

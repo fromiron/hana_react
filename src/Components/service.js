@@ -178,7 +178,6 @@ font-size: 18px;
 color: #565656;
 margin: 1em 0;
 padding: 0 1em;
-font-family: 'Kosugi Maru', sans-serif;
 @media (max-width: 768px) {
 font-size: 20px;
 padding: 0;
@@ -219,11 +218,13 @@ color: #979797;
 `;
 
 const ServiceText = styled.div`
-font-size: 18px;
+font-size: 1.7rem;
 color: #565656;
 padding:0.5em 1em;
 margin-bottom: 2em;
 word-break: initial;
+font-family: 'Kosugi Maru', sans-serif;
+line-height: 2.5rem;
 @media (max-width: 768px) {
 padding:0;
 
@@ -261,7 +262,7 @@ function Service() {
 
                             <TitleInnerWrapper><ServiceTitle>優しさ</ServiceTitle>
                                 <ServiceSubTitle>家族のようなお世話</ServiceSubTitle>
-                                <ServiceText>うさぎさんと飼い主さんの幸せを重視うさぎさんがストレスを感じることなくお留守番ができるようお手伝いします。</ServiceText>
+                                <ServiceText>うさぎと飼い主さんの幸せを重視しています。うさぎさんがストレスを感じることなくお留守番ができるようお手伝いします。</ServiceText>
                             </TitleInnerWrapper>
 
 
@@ -277,8 +278,7 @@ function Service() {
                                 <ServiceTitle>安心</ServiceTitle>
                                 <ServiceSubTitle>安心出来る専門性</ServiceSubTitle>
 
-                                <ServiceText>うさぎ専門のシッターです。<br/>他の動物の匂いに敏感なうさぎさんにも安心してご利用いただけます。
-                                    うさぎの飼育経験があり、お世話に慣れているスタッフが対応いたします。
+                                <ServiceText>うさぎの飼育経験があり、お世話に慣れているスタッフが対応いたします。デリケートなうさぎさんも安心してご利用いただけます。
                                 </ServiceText> </TitleInnerWrapper>
 
 
@@ -292,7 +292,7 @@ function Service() {
 
                             <TitleInnerWrapper><ServiceTitle>カスタムケア</ServiceTitle>
                                 <ServiceSubTitle>柔軟な対応</ServiceSubTitle>
-                                <ServiceText>多数多種のペットシッティング経験があります。<br/>ウサギさんと一緒に生活しているわんちゃん、猫ちゃん、チンチラさんなどのお世話もお任せください。</ServiceText>
+                                <ServiceText>様々なペットのシッティング経験があります。うさぎさんと一緒に生活しているワンちゃん、ネコちゃんなどのお世話もお任せください。</ServiceText>
                             </TitleInnerWrapper>
 
                         </ImageTitleWrapper>

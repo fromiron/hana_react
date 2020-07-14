@@ -134,7 +134,7 @@ top: 26rem;
 const TextSize5 = styled.div`
 position: absolute;
 top: 52rem;
-font-size: 4rem;
+font-size: 5rem;
 padding: 1rem;
 text-align: center;
 left: 50%;
@@ -167,6 +167,7 @@ const TextSize6 = styled.div`
  width: 100%;
  text-align: center;
  top:40em;
+ color:#cecece;
 @media (max-width: 768px) {
         top: 50rem;   
     }
@@ -188,7 +189,7 @@ animation: ${bounce} 2s infinite;
 
 const PinkBtn = styled.button`
 position: absolute;
-bottom: 2em;
+bottom: 3em;
 width: 150px;
 height: 48px;
 background-color:#FF6082;
@@ -255,10 +256,10 @@ function Use() {
 
                     </ArrowIcon>
 
-                    <TextSize5>シッター当日</TextSize5>
+                    <TextSize5>お世話当日</TextSize5>
 
                     <TextSize6>
-                        鍵の返却の形は<br/>ポストBox、レターパック、宅急便など<br/>
+                        ※鍵の返却はポスト、レターパックなど<br/>
                         お客様のリクエストに応じます。
                     </TextSize6>
 

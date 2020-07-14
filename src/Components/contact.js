@@ -123,7 +123,7 @@ function Contact() {
                 <ContactTitle>Contact</ContactTitle>
                 <ContactSubTitle>ご連絡</ContactSubTitle>
                 <ContactTextWrapper>
-                    <Text>ご連絡は070-1234-1234<IconWrapper src={tel}/></Text>
+                    <Text>ご連絡は070-8433-6363<IconWrapper src={tel}/></Text>
 
                     <Text>または</Text>
                     <Text><Line><IconWrapper src={line}/></Line>と<IconWrapper src={mail}/>どちらでも出来ます。</Text>

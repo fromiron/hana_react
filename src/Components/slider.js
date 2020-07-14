@@ -88,6 +88,7 @@ const InnerTextBig = styled.div`
 margin: 1em 0;
 font-size: 1.5em;
 min-width: 300px;
+line-height: 3rem;
 `;
 
 const TextHana = styled.div`
@@ -183,12 +184,12 @@ class MainSlider extends Component {
                             <MainMessageInnerWrapper>
                                 <MainMessageInnerText>
                                     <Flip left cascade>
-                                        ネザー、ロップ、ミニうさぎなど
+                                        ネザー・ロップ・ミニウサギなど
                                     </Flip>
 
                                     <InnerTextBig>
                                         <Flip left cascade>
-                                            うさぎ向けペットシッター
+                                            うさぎ向け<br/>ペットシッター
                                         </Flip>
                                     </InnerTextBig>
 
