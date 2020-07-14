@@ -24,7 +24,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
-    font-family: UDDigiKyokashoNK-R, UD Digi Kyokasho NK-R;
+    font-family: UDDigiKyokasho R, UDDigiKyokashoNK-R, UD Digi Kyokasho NK-R;
     background-color: #F8F8F8;
 
 }
@@ -34,13 +34,6 @@ a {
 
 }
 
-/*
-body {
-    line-height: 1;
-    font-family: UDDigiKyokasho R;
-    background-color: #F8F8F8;
-
-}*/
 
 ol, ul {
     list-style: none;
