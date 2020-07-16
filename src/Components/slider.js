@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
@@ -88,7 +89,7 @@ const InnerTextBig = styled.div`
 margin: 1em 0;
 font-size: 1.5em;
 min-width: 300px;
-line-height: 3rem;
+line-height: 5rem;
 `;
 
 const TextHana = styled.div`
@@ -134,6 +135,7 @@ height: 48px;
 background-color:#FF6082;
 color: white;
 transition: all 1s ease;
+cursor: pointer;
 &:hover{
 background-color: #565656;
 }
@@ -184,12 +186,13 @@ class MainSlider extends Component {
                             <MainMessageInnerWrapper>
                                 <MainMessageInnerText>
                                     <Flip left cascade>
-                                        ネザー・ロップ・ミニウサギなど
+                                        うさぎ向けペットシッター
                                     </Flip>
 
                                     <InnerTextBig>
                                         <Flip left cascade>
-                                            うさぎ向け<br/>ペットシッター
+                                            <div>うさぎとの生活を</div>
+                                            <div>より良いものに</div>
                                         </Flip>
                                     </InnerTextBig>
 
@@ -198,7 +201,7 @@ class MainSlider extends Component {
                                         Rabbit sitter
                                     </SmallText>
 
-                                    <PinkBtn>CONTACT</PinkBtn>
+                                    <Link to="/contact"><PinkBtn>CONTACT</PinkBtn></Link>
                                 </MainMessageInnerText>
                             </MainMessageInnerWrapper>
 

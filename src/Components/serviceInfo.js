@@ -16,7 +16,7 @@ box-sizing: border-box;
 display: flex;
 justify-content: center;
 transition: all 0.5s ease;
-padding: 0rem 2rem 0rem 2rem;
+padding: 0rem 1rem 0rem 1rem;
 overflow: hidden;
 `;
 
@@ -81,7 +81,6 @@ background-color: #dcdcdc;
 `;
 
 
-
 const GridItemCnt = styled.div`
 position: absolute;
 font-size: 2.5rem;
@@ -96,7 +95,6 @@ left: 0;
 const TitleWrapper = styled.span`
 width: 100%;
 height: 100%;
-
 font-size: 2.5rem;
 line-height: 4rem;
 text-align: center;
@@ -115,13 +113,14 @@ background-size: cover;
     }
 @media screen and (max-width: 550px){
 font-size: 1.8rem;
-word-break: keep-all;
+padding: 2rem 0;
 }
 `;
 
 const GridImage = styled.div`
 height: 150px;
 width: auto;
+overflow: hidden;
 `;
 const Image = styled.img`
 display: block;
@@ -144,6 +143,7 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 font-size: 2rem;
+margin-top: 1rem;
 &.last{
 height: 40%;
 padding: 2rem 0; 
@@ -158,6 +158,12 @@ font-size: 1.6rem;
 line-height: 2.2rem;
 `;
 
+const Test = styled.div`
+width: 100%;
+height: auto;
+margin: 0;
+padding: 0;
+`;
 
 function About() {
     return (
@@ -167,7 +173,9 @@ function About() {
                     <GridItem className="span-col2">
                         <TitleWrapper>
                             ひとりといっぴきに合わせた内容で<br/>お世話します。
+
                         </TitleWrapper>
+
 
                     </GridItem>
                     <GridItem><GridItemCnt>1</GridItemCnt><GridImage><Image src={carrot}/></GridImage>
@@ -180,6 +188,7 @@ function About() {
                     <GridItem><GridItemCnt>3</GridItemCnt><GridImage><Image src={sofa}/></GridImage>
                         <GridItemTitle>へやんぽ</GridItemTitle><GridItemText>室内、サークル内等。うさぎさんにいつものようにへやんぽを満喫していただきます。※お外でのうさんぽはうさぎさんの安全を考慮し、ご遠慮いただいております。</GridItemText></GridItem>
 
+
                     <GridItem><GridItemCnt>4</GridItemCnt><GridImage><Image src={brush}/></GridImage>
                         <GridItemTitle>ブラッシング</GridItemTitle><GridItemText>換毛期のうさぎさんの抜け毛はすさまじいです。うさぎさんのご様子をうかがいながら、可能な範囲でブラッシングいたします。</GridItemText></GridItem>
 
@@ -190,9 +199,18 @@ function About() {
                         <GridItemTitle>お世話内容報告</GridItemTitle><GridItemText>メールやLINEなどでお世話内容とうさぎさんのご様子をご報告いたします。
                             ご希望の枚数でお写真もお送りいたします。</GridItemText></GridItem>
 
-                    <GridItem className="last span-col1">
-                        <GridItemTitle
-                            className="last">保障</GridItemTitle><GridItemText>細心の注意を払ってお世話いたしますが、万が一不慮の事故が起こった場合には、損害保証がございます。</GridItemText></GridItem>
+                    <GridItem>
+                        <GridItemCnt>店長</GridItemCnt>
+                        <GridImage>
+
+                            <Test>
+                                <iframe width="100%" height="100%"
+                                        src="https://www.youtube.com/embed/qjuxh7c2rSs?mute=1&loop=1&playlist=qjuxh7c2rSs&autoplay=1&disablekb=1&controls=0&amp;start=1"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen></iframe>
+                            </Test></GridImage>
+                        <GridItemTitle>補償体制</GridItemTitle><GridItemText>細心の注意を払ってお世話いたしますが、万が一の事故に備え損害保険に加入しています。</GridItemText></GridItem>
 
 
                 </Grid>

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../index.css';
 import Header from '../Components/header';
+import Contact from "../Components/contact";
+import Footer from "../Components/footer";
 
 function ContactPage() {
     return (
@@ -8,8 +10,8 @@ function ContactPage() {
         <>
             <Header/>
 
-            contact
-
+            <Contact/>
+            <Footer/>
 
         </>
     );

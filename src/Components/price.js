@@ -50,6 +50,25 @@ margin-bottom: 5rem;
 
 `;
 
+
+const Info = styled.div`
+margin-bottom: 2rem;
+font-size: 1.5rem;
+line-height: 2rem;
+padding: 0 2rem;
+text-align: center;
+word-break:keep-all;
+&.cancel{
+display: block;
+margin: auto;
+background-color: #ff6082;
+color: white;
+border-radius: 1rem;
+padding: 3px 1rem;
+width: fit-content;
+}
+`;
+
 function Price() {
     const fullTime = {
         plan: "Plan.1",
@@ -83,6 +102,13 @@ function Price() {
                 <PageSubTitle>
                     ご利用料金
                 </PageSubTitle>
+                <Info>
+                    初回登録料
+                    500円
+                    LINEのお友達追加でクーポン配布中♪
+
+                </Info>
+
                 <MarinFixer>
                     <Plan image={full}
                           title={fullTime.plan} range={fullTime.range} color={fullTime.color}
@@ -101,6 +127,15 @@ function Price() {
                           price2={halfTime.price2}
                           time={halfTime.time}/>
                 </MarinFixer>
+                <Info>
+                    現金でのお支払いをお願いしております。 PayPayやLINE Payもご利用いただけるよう只今準備中です。
+
+                </Info>
+                <Info className="cancel">
+                    キャンセル料金は前日キャンセル：50%、当日キャンセル：100%
+
+                </Info>
+
                 <PageTitle>
                     Fare
                 </PageTitle>
@@ -108,8 +143,10 @@ function Price() {
                     交通料金
                 </PageSubTitle>
                 <MarinFixer>
-                        <Fare/>
+                    <Fare/>
                 </MarinFixer>
+
+
             </PriceInnerWrapper>
         </StyledPrice>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import wLogo from '../images/logo_w.svg';
 import line from '../images/line2.svg';
@@ -26,7 +27,6 @@ box-sizing: border-box;
 display: flex;
 justify-content: center;
 transition: all 0.5s ease;
-
 `;
 
 const FooterTop = styled.div`
@@ -68,13 +68,23 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 height: 100%;
+
+text-decoration: none;
 @media (max-width: 550px) {
 display: none;
 }
 `;
 const FooterNavLi = styled.li`
 display: block;
+color: white;
 font-size: 1.5rem;
+transition: all 0.4s ease;
+padding: 0.3rem ;
+border-radius: 5px;
+&:hover{
+background-color: white;
+color: #A6ADB4;
+}
 `;
 
 
@@ -122,41 +132,50 @@ function Contact() {
                     <FooterLogo className="footer__top-logo"></FooterLogo>
                     <FooterNav className="footer__top-nav">
                         <FooterNavUl>
-                            <FooterNavLi>Home</FooterNavLi>
-                            <FooterNavLi>About</FooterNavLi>
-                            <FooterNavLi>Service</FooterNavLi>
-                            <FooterNavLi>Price</FooterNavLi>
-                            <FooterNavLi>Contact</FooterNavLi>
+                            <Link to="/"><FooterNavLi>Home</FooterNavLi></Link>
+                            <Link to="/about"><FooterNavLi>About</FooterNavLi></Link>
+                            <Link to="/service"><FooterNavLi>Service</FooterNavLi></Link>
+                            <Link to="/price"><FooterNavLi>Price</FooterNavLi></Link>
+                            <Link to="/contact"><FooterNavLi>Contact</FooterNavLi></Link>
                         </FooterNavUl>
                     </FooterNav>
                     <FooterSns className="footer__top-sns">
-                        <div className="footer__top-sns__line"><FooterSnsIcon src={line}/></div>
-                        <div className="footer__top-sns__instagram"><FooterSnsIcon src={instagram}/></div>
-                        <div className="footer__top-sns__twitter"><FooterSnsIcon src={twitter}/></div>
+                        <div className="footer__top-sns__line">
+                            <a href="https://lin.ee/3dDtfnS" target="_blank">
+                                <FooterSnsIcon src={line}/></a></div>
+                        <div className="footer__top-sns__instagram">
+                            <a href="https://www.instagram.com/rabbitsitter_hana" target="_blank">
+                                <FooterSnsIcon src={instagram}/></a></div>
+                        <div className="footer__top-sns__twitter">
+                            <a href="https://twitter.com/RabbitSitterH" target="_blank"><
+                                FooterSnsIcon src={twitter}/></a></div>
                     </FooterSns>
 
                     <FooterInfo className="footer__top-info">
                         <FooterInfoTable>
                             <tr>
-                                <td colSpan="2">特定商取引法に基づく表記</td>
+                                <td colSpan="2">Rabbit Sitter HANA</td>
                             </tr>
                             <tr>
-                                <td>代表責任者</td>
+                                <td>動物取扱責任者</td>
                                 <td>畑山由樹</td>
                             </tr>
                             <tr>
-                                <td>所在地</td>
-                                <td>〒062-0932 <br/>
-                                    札幌市豊平区平岸2条17丁目1-15-303
+                                <td>事務所所在地</td>
+                                <td>札幌市豊平区<br/>
+                                    平岸2条17丁目1-15-303
                                 </td>
                             </tr>
                             <tr>
-                                <td>商品の名称</td>
-                                <td>シッターサービス</td>
+                                <td>取扱業種別</td>
+                                <td>保管</td>
                             </tr>
                             <tr>
-                                <td>電話番号</td>
-                                <td>070-8433-6363</td>
+                                <td>登録番号</td>
+                                <td>
+                                    <div>札保動セ登録第1844号</div>
+                                    <div>2020年6月24日-2025年6月23日</div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>メール</td>

@@ -75,6 +75,20 @@ width: 100%;
 justify-content: space-around;
 `;
 
+const Info = styled.div`
+margin-bottom: 2rem;
+font-size: 1.5rem;
+line-height: 2rem;
+padding: 0 2rem;
+text-align: center;
+`;
+
+const SpecialInfo = styled.div`
+text-align: center;
+font-size: 1.4rem;
+margin-bottom: 1rem;
+`;
+
 
 function Fare() {
 
@@ -95,14 +109,25 @@ function Fare() {
     )
 
     return <>
+        <Info>
+    <span>
+   拠点最寄り駅である地下鉄南北線「中島公園駅」より<br/>
+   お客様宅までの実費交通費を頂戴いたします。<br/>
+詳細はお気軽にお問合せくださいませ。
+
+    </span>
+        </Info>
+
         <Fade bottom>
             <FareWrapper>
                 <FareItem>
                     <Traffic style={{backgroundColor: "gray"}}>市電</Traffic>
                     <TrafficDetail>
                         <TrafficInfo>
-                            <Station>札幌市電前駅</Station><FareInfo
-                            style={{backgroundColor: "gray"}}>300円</FareInfo>
+                            <Station>札幌市電</Station>
+                            <SpecialInfo>※一部無料区間あり。　詳細はお問い合わせくださいませ。</SpecialInfo>
+                            <FareInfo
+                                style={{backgroundColor: "gray"}}>400円</FareInfo>
                         </TrafficInfo>
                     </TrafficDetail>
                 </FareItem>

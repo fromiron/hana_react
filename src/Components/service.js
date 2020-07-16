@@ -262,7 +262,7 @@ function Service() {
 
                             <TitleInnerWrapper><ServiceTitle>優しさ</ServiceTitle>
                                 <ServiceSubTitle>家族のようなお世話</ServiceSubTitle>
-                                <ServiceText>うさぎと飼い主さんの幸せを重視しています。うさぎさんがストレスを感じることなくお留守番ができるようお手伝いします。</ServiceText>
+                                <ServiceText>うさぎと飼い主さんのより良い生活をサポートします。うさぎさんがストレスを感じることなくお留守番ができるようお手伝いします。</ServiceText>
                             </TitleInnerWrapper>
 
 

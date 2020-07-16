@@ -196,6 +196,7 @@ background-color:#FF6082;
 color: white;
 transform: translateX(-50%);
 transition: all 1s ease;
+cursor: pointer;
 &:hover{
 background-color: #565656;
 }
@@ -210,7 +211,7 @@ function Use() {
         Popup("よくある質問", {
             Title: SmallLogo,
             buttons: {
-                time: "受付時間はいつからですか？",
+                time: "営業時間は何時からですか？",
                 pay: "支払方法を教えてください。",
                 key: "鍵の預け方法はどうなりますか？",
                 onSitting: "ペットの様子を教えてもらえますか？",
@@ -221,16 +222,16 @@ function Use() {
             // eslint-disable-next-line
             switch (value) {
                 case "time":
-                    Popup("メール、ラインでは24時間お受けできますが電話の場合は朝10時より午後17時までとなっております。");
+                    Popup("お問合せ受付時間は10：00～20：30です。 シッター訪問時間は7：00～21：00となっております。ご希望によっては時間外も対応可能です。");
                     break;
                 case "pay":
-                    Popup("お支払いは現金、ラインペイ、銀行振込ができます。");
+                    Popup("現金でのお支払いをお願いしております。PayPayやLINE Payもご利用いただけるよう只今準備中です。");
                     break;
                 case "key":
-                    Popup("事前問合せ時にお預かりいたします。");
+                    Popup("基本的には事前打ち合わせ時にお預かりしております。返却方法は、直接手渡し、ポスト、レターパック等ご希望に合わせて対応いたします。");
                     break;
                 case "onSitting":
-                    Popup("はい、もちろんでございます。当店ではラインもしくはメールにてペットのお写真数枚とお世話内容・ペットの様子を詳しくご報告致しております。");
+                    Popup("LINEやメール等ご希望の方法で、お世話内容・ペットのご様子をお写真付きでご報告いたします。報告内容もパーソナルにご対応いたしますので、写真の枚数や必要事項などにご希望がございましたらお知らせください。");
                     break;
 
             }
@@ -259,8 +260,8 @@ function Use() {
                     <TextSize5>お世話当日</TextSize5>
 
                     <TextSize6>
-                        ※鍵の返却はポスト、レターパックなど<br/>
-                        お客様のリクエストに応じます。
+                        うさぎさんがなるべく普段通りの生活ができるようお世話いたします。<br/>
+                        その後、メールやLINEなどでお世話内容をご報告いたします。
                     </TextSize6>
 
                     <PinkBtn onClick={PopupEvent}>よくある質問</PinkBtn>
