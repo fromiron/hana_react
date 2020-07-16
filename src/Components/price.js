@@ -57,7 +57,6 @@ font-size: 1.5rem;
 line-height: 2rem;
 padding: 0 2rem;
 text-align: center;
-word-break:keep-all;
 &.cancel{
 display: block;
 margin: auto;
@@ -128,12 +127,11 @@ function Price() {
                           time={halfTime.time}/>
                 </MarinFixer>
                 <Info>
-                    現金でのお支払いをお願いしております。 PayPayやLINE Payもご利用いただけるよう只今準備中です。
+                    現金でのお支払いをお願いしております。 PayPayやLINEPayもご利用いただけるよう只今準備中です。
 
                 </Info>
                 <Info className="cancel">
                     キャンセル料金は前日キャンセル：50%、当日キャンセル：100%
-
                 </Info>
 
                 <PageTitle>

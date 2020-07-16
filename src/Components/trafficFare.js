@@ -80,7 +80,7 @@ margin-bottom: 2rem;
 font-size: 1.5rem;
 line-height: 2rem;
 padding: 0 2rem;
-text-align: center;
+text-align: left;
 `;
 
 const SpecialInfo = styled.div`
@@ -111,9 +111,8 @@ function Fare() {
     return <>
         <Info>
     <span>
-   拠点最寄り駅である地下鉄南北線「中島公園駅」より<br/>
-   お客様宅までの実費交通費を頂戴いたします。<br/>
-詳細はお気軽にお問合せくださいませ。
+   拠点最寄り駅である地下鉄南北線「中島公園駅」より
+   お客様宅までの実費交通費を頂戴いたします。詳細はお気軽にお問合せくださいませ。
 
     </span>
         </Info>
@@ -125,7 +124,7 @@ function Fare() {
                     <TrafficDetail>
                         <TrafficInfo>
                             <Station>札幌市電</Station>
-                            <SpecialInfo>※一部無料区間あり。　詳細はお問い合わせくださいませ。</SpecialInfo>
+                            <SpecialInfo>※一部無料区間あり。詳細はお問い合わせくださいませ。</SpecialInfo>
                             <FareInfo
                                 style={{backgroundColor: "gray"}}>400円</FareInfo>
                         </TrafficInfo>

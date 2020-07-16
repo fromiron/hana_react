@@ -16,7 +16,7 @@ position: relative;
 padding: 1rem;
 background-color: white;
 &:hover{
-box-shadow: 0 5px 5px rgba(255,96,130,0.56),0 15px 25px rgba(255,96,130,0.2),0 0px 5px rgba(255,96,130,0.2);
+box-shadow: 0 5px 5px rgba(255,96,130,0.56),0 15px 25px rgba(255,96,130,0.2),0 0 5px rgba(255,96,130,0.2);
 top:-2px;
 }
   @media (max-width: 550px) {
@@ -99,7 +99,7 @@ display:flex;
 `;
 const BottomObjTitle = styled.div`
 height: auto;
-width: 100px;
+width: 70px;
 font-size: 1.6rem;
 color: #bababa;
 `;
