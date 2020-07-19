@@ -129,7 +129,7 @@ function Contact() {
         <StyledFooter>
             <FooterInnerWrapper>
                 <FooterTop className="footer__top">
-                    <FooterLogo className="footer__top-logo"></FooterLogo>
+                    <FooterLogo className="footer__top-logo"/>
                     <FooterNav className="footer__top-nav">
                         <FooterNavUl>
                             <Link to="/"><FooterNavLi>Home</FooterNavLi></Link>
@@ -141,13 +141,14 @@ function Contact() {
                     </FooterNav>
                     <FooterSns className="footer__top-sns">
                         <div className="footer__top-sns__line">
-                            <a href="https://lin.ee/3dDtfnS" target="_blank">
+                            <a href="https://lin.ee/3dDtfnS" target="_blank" rel="noreferrer noopener">
                                 <FooterSnsIcon src={line}/></a></div>
                         <div className="footer__top-sns__instagram">
-                            <a href="https://www.instagram.com/rabbitsitter_hana" target="_blank">
+                            <a href="https://www.instagram.com/rabbitsitter_hana" target="_blank"
+                               rel="noreferrer noopener">
                                 <FooterSnsIcon src={instagram}/></a></div>
                         <div className="footer__top-sns__twitter">
-                            <a href="https://twitter.com/RabbitSitterH" target="_blank"><
+                            <a href="https://twitter.com/RabbitSitterH" target="_blank" rel="noreferrer noopener"><
                                 FooterSnsIcon src={twitter}/></a></div>
                     </FooterSns>
 
