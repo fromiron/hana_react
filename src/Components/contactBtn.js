@@ -11,6 +11,8 @@ function ContactBtn({color, text}) {
         border-radius: 4px;
         transition: all 1s ease;
         cursor: pointer;
+        font-size:1.6rem;
+        font-family: 'Kosugi Maru', sans-serif;
             &:hover{
             background-color: #565656;
             

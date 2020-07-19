@@ -90,6 +90,7 @@ margin: 1em 0;
 font-size: 1.5em;
 min-width: 300px;
 line-height: 5rem;
+word-break: keep-all;
 `;
 
 const TextHana = styled.div`

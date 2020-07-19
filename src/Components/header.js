@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import Logo from '../images/logo.svg'
 import SmallLogo from '../images/small_logo.svg'
 import useWindowSize from "./windowSize";
@@ -16,7 +16,6 @@ const StyledHeader = styled.header`
         transition: all 0.5s ease;
         z-index: 999;
         box-shadow: 0 0 40px rgba(196,196,196,0.7);
-        
             &:after {
                 content: "";
                 display: block;
@@ -33,6 +32,7 @@ const StyledHeader = styled.header`
                   height: 28px;
                   display: none
                     }
+               
                 }`;
 
 
@@ -47,7 +47,10 @@ const StyledNav = styled.div`
             height: 100px;
             display: flex;
             flex-direction: column;
-            }`;
+            }
+
+`;
+
 
 const NavElement = styled.div`
     display: inline;
@@ -102,7 +105,12 @@ top:-50px;
         right:0;
         padding: 1.5em;        
             top:45px;
-            z-index: 999;
+            z-index: 999;}
+             @media (max-width: 350px) {
+        
+        padding: 1.5em 0.5em;        
+           
+            }
 `;
 
 
@@ -123,7 +131,7 @@ const LogoWrapper = styled.img`
 
 @media (max-width: 768px) {
   height: 50px;
-  left: 10px;
+  left: 0;
    position: absolute;
    padding: 2.5em;
       top:-15px;

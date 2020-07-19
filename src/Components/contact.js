@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import tel from '../images/tel.svg';
 import line from '../images/line.svg';
 import mail from '../images/mail.svg';
@@ -71,7 +71,6 @@ transition: all 0.2s ease;
 position: relative;
 height: 100%;
 display: flex;
-line-height: 7rem;
 &::before{
 transition: all 0.2s ease;
 content:""; 
@@ -91,7 +90,6 @@ z-index:999;
 display:block;
 cursor: none;
 }
-
 `;
 
 const Table = styled.table`
@@ -108,7 +106,7 @@ const TableTd = styled.td`
 vertical-align: middle;
 padding: 3rem 1rem;
 line-height: 2.4rem;
-font-size: 1.8rem;
+font-size: 1.5rem;
 `;
 
 const Method = styled.div`
@@ -121,9 +119,36 @@ max-width: 600px;
 box-sizing: border-box;
 padding: 0 2rem;
 margin: auto  auto 2rem auto; 
-font-size: 1.5rem;
+font-size: 1.8rem;
 line-height: 2rem;
 text-align: left;
+`;
+
+
+const bounce = keyframes`
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1)
+  }
+`;
+
+const EventMsgWrapper = styled.div`
+display: flex;
+justify-content: center;
+`;
+const EventMsg = styled.div`
+width: fit-content;
+color: white;
+padding: 10px;
+background-color: #01B920;
+border-radius: 10px;
+animation: ${bounce} 2s infinite;
+font-family: 'Kosugi Maru', sans-serif;
 `;
 
 
@@ -138,10 +163,17 @@ function Contact() {
                 <ContactSubTitle>ご連絡</ContactSubTitle>
                 <ContactMethodWrapper>
                     <Info>
-                        サービス内容や料金、お見積もりにつきましてもお気軽にお問合せくださいませ。
+                        サービス内容や料金、お見積もりなどお気軽にお問合せくださいませ。
                         お問合せいただいた内容につきましては受付時間内（10：00～20：30）に順次ご返信いたします。
                     </Info>
+                    <EventMsgWrapper>
+                        <EventMsg>
+                            LINE友だち追加で、初回登録料無料 クーポン配布中！
+                        </EventMsg>
+                    </EventMsgWrapper>
+
                     <Table>
+
                         <TableTr>
                             <TableTd><Line>
                                 <a href="https://lin.ee/3dDtfnS" target="_blank" rel="noreferrer noopener">

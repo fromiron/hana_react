@@ -104,7 +104,7 @@ function Price() {
                 <Info>
                     初回登録料
                     500円
-                    LINEのお友達追加でクーポン配布中♪
+                    LINEの友だち追加でクーポン配布中♪
 
                 </Info>
 
