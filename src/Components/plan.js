@@ -26,7 +26,7 @@ top:-2px;
 `;
 
 const PlanImageContainer = styled.div`
-width: 200px;
+max-width: 100%;
 max-height: 250px;
 overflow: hidden;
 background-color: white;
@@ -88,10 +88,13 @@ color: #bababa;
 
 `;
 const Detail = styled.div`
-word-break: keep-all;
 font-size: 1.6rem;
 line-height: 2.4rem;
 margin-bottom: 3rem;
+word-break: keep-all;
+ @media (max-width: 550px) {
+word-break: normal;
+} 
 `;
 
 const BottomObjWrapper = styled.div`
@@ -122,7 +125,19 @@ const bounce = keyframes`
   }
 `;
 
-function Plan({image, title, range, color, sub, detail, price, price2,priceDetail, time}) {
+
+function Plan({image, title, range, color, sub, detail, price, price2, priceDetail, time}) {
+    const PriceDetail = styled.div`
+font-size: 1.2rem;
+width: 100%;
+background-color: ${color};
+color: white;
+text-align: center;
+padding: 0.5rem;
+border-radius: 0.5rem;
+margin-bottom: 1rem;
+`;
+
     const ImageSize = {
         Height: "auto",
         width: "auto",
@@ -178,8 +193,12 @@ function Plan({image, title, range, color, sub, detail, price, price2,priceDetai
                 <SubTitle style={{color: color}}>[{sub}]</SubTitle>
                 <DetailDetail>お世話内容</DetailDetail>
                 <Detail>{detail}</Detail>
-                <BottomObjWrapper><BottomObjTitle>Price</BottomObjTitle><BottomObj
-                    style={{color: color}}><PriceDecoration>{price}</PriceDecoration>{price2} {priceDetail}
+                {priceDetail !== undefined ? <PriceDetail>{priceDetail}</PriceDetail> : <></>}
+                <BottomObjWrapper>
+
+                    <BottomObjTitle>Price</BottomObjTitle><BottomObj
+                    style={{color: color}}><PriceDecoration>{price}</PriceDecoration>{price2}
+
                 </BottomObj></BottomObjWrapper>
                 <BottomObjWrapper><BottomObjTitle>Time</BottomObjTitle><BottomObj>{time}分</BottomObj>
                 </BottomObjWrapper>

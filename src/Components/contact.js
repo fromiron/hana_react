@@ -103,7 +103,7 @@ const TableTr = styled.tr`
 `;
 
 const TableTd = styled.td`
-vertical-align: middle;
+vertical-align: top;
 padding: 3rem 1rem;
 line-height: 2.4rem;
 font-size: 1.5rem;
@@ -182,11 +182,12 @@ function Contact() {
                             </Line>
                                 <Method>LINE</Method>
                             </TableTd>
-                            <TableTd>LINEでのお問い合わせの場合、一部自動応答でご返信いたします。
-                                簡単なご質問には自動でお答えすることができますので、ぜひご利用ください。
+                            <TableTd>
                                 <a href="https://lin.ee/3dDtfnS" target="_blank" rel="noreferrer noopener"><ContactBtn
                                     color={"#01B920"}
                                     text={"友だち追加"}/></a>
+                                LINEでのお問い合わせの場合、一部自動応答でご返信いたします。
+                                簡単なご質問には自動でお答えすることができますので、ぜひご利用ください。
                             </TableTd>
                         </TableTr>
 
@@ -197,9 +198,10 @@ function Contact() {
 
                                 <Method>email</Method>
                             </TableTd>
-                            <TableTd>フィルター設定により、メールが届かないこともございます。お急ぎのご依頼や、24時間以内に返信がない場合にはLINEやお電話でのお問合せをお願いいたします。
+                            <TableTd>
                                 <a href="mailto:hana.rbsr@gmail.com" title="hana.rbsr@gmail.com"> <ContactBtn
                                     color={"#457279"} text={"hana.rbsr@gmail.com"}/></a>
+                                フィルター設定により、メールが届かないこともございます。お急ぎのご依頼や、24時間以内に返信がない場合にはLINEやお電話でのお問合せをお願いいたします。
                             </TableTd>
                         </TableTr>
 
@@ -208,9 +210,10 @@ function Contact() {
                             <TableTd><a href="tel:070-8433-6363" title="070-8433-6363"> <IconWrapper src={tel}/></a>
                                 <Method>Tel</Method>
                             </TableTd>
-                            <TableTd>接客中などで出られないこともございますので、その場合は営業時間内に折り返しいたします。
+                            <TableTd>
                                 <a href="tel:070-8433-6363" title="070-8433-6363"> <ContactBtn color={"#9B9B9B"}
                                                                                                text={"070-8433-6363"}/></a>
+                                接客中などで出られないこともございますので、その場合は営業時間内に折り返しいたします。
                             </TableTd>
                         </TableTr>
 
@@ -222,10 +225,11 @@ function Contact() {
                                     <IconWrapper src={instagram}/></a>
                                 <Method>Instagram</Method>
                             </TableTd>
-                            <TableTd>DMでもお問合せいただけます。うさぎ店長の日常もぜひご覧ください。
+                            <TableTd>
                                 <a href="https://www.instagram.com/rabbitsitter_hana/" title="Instagram"
                                    target="_blank" rel="noreferrer noopener">
                                     <ContactBtn color={"#F0A0B0"} text={"インスタを見る"}/></a>
+                                DMでもお問合せいただけます。うさぎ店長の日常もぜひご覧ください。
                             </TableTd>
 
                         </TableTr>
